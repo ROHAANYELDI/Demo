@@ -14,12 +14,19 @@ df
 if st.checkbox("Preview DataFrame"):
 	
 	if st.button("Head"):
-		st.write(my_dataset.head())
+		st.write(df.head())
 	if st.button("Tail"):
-		st.write(my_dataset.tail())
+		st.write(df.tail())
 	else:
-		st.write(my_dataset.head(2))
+		st.write(df.head(2))
 
-if st.checkbox("Show All DataFrame"):
-	st.dataframe(my_dataset)
+# Show Entire dataframe
+if st.checkbox("Show all DataFrame"):
+	st.dataframe(df)
+
+# Show Description
+if st.checkbox("Show All Column Name"):
+	st.text("Columns:")
+	st.write(df.columns)
+st.divider()
 
